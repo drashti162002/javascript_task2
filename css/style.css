@@ -1,0 +1,22 @@
+*{
+    box-sizing: border-box;
+}
+input{
+    box-shadow: none;
+    outline: none;
+}
+.user_name{
+    color: red;
+}
+.form_contant{
+    background-color: rgb(218, 242, 242);
+}
+.full_part{
+    background-color: liner-;
+}
+.form_data{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.table_data{
+    margin-top: 50px;
+}

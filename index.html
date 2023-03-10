@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="full_part">
+    <button class="btn btn-success" onclick="addFormData()">Add Form</button>
+    <div class="container form_data">
+    <form id="form" class="form_contant">
+        <div>
+            <lable for="text">Name:</lable>
+            <input type="text" id="name" class="form-control">
+           
+        </div><br>
+        <div>
+            <lable for="email">Email:</lable>
+            <input type="email" id="email" class="form-control">
+            
+        </div><br>
+        <div>
+            <lable for="number">Phone number:</lable>
+            <input type="number" id="phoneNumber" class="form-control">
+         
+        </div><br>
+        <div>
+            <lable for="date">Birthday:</lable>
+            <input type="date" id="birthday" class="form-control" required>   
+              
+        </div><br>
+        <div>
+            <lable for="time">Appointment time:</lable>
+            <input type="time" id="time" class="form-control" required>
+           
+        </div><br>
+        <div>
+            <lable for="select_color">Favorite color:</lable>
+            <select id="select_color" class="form-control">
+                <option>select color</option>
+                <option >Pink</option>
+                <option >Red</option>
+                <option >Blue</option>
+            </select>
+            
+        </div><br>
+        <div>
+            <lable for="paymentMethod">Payment method:</lable><br> 
+            <input type="radio" id="paymentMethod" name="Payment" value="op1">Cash On Delivery<br>
+            <input type="radio" id="paymentMethod" name="Payment" value="op2">Debit cards<br>
+            <input type="radio" id="paymentMethod" name="Payment" value="op3">Credit cards<br>
+         
+        </div><br>
+        <div>
+            <lable for="range">Age:</lable>
+            <input type="range" id="age" min="0" max="100">
+           
+        </div><br>
+        <div>
+            <lable for="checkbox">Checkbox option:</lable><br>
+            <input type="checkbox" id="cOption">bank_1<br>
+            <input type="checkbox" id="cOption">bank_2<br>
+            <input type="checkbox" id="cOption">bank_3<br>
+          
+        </div><br>
+        <div>
+            <lable for="file">Upload photo</lable>
+            <input type="file" id="photo">
+            
+        </div><br>   
+    </form>
+    <div>
+        <button  class="btn btn-danger" onclick="submit()">submit</button>
+    </div>
+    </div>
+    
+    <div class="container table_data">
+    <table class="table table-bordered">
+        <tr>
+            <td>Name</td>
+            <td>Email</td>
+            <td>Phone Number</td>
+            <td>Birthday</td>
+            <td>Appointment time</td>
+            <td>Favorite color</td>
+            <td>Payment method</td>
+            <td>Age</td>
+            <td>Checkbox option</td>
+            <td>Upload photo</td>
+        </tr>
+    </table>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>
