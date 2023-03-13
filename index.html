@@ -9,88 +9,113 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="full_part">
-    <button class="btn btn-success" onclick="addFormData()">Add Form</button>
-    <div class="container form_data">
-    <form id="form" class="form_contant">
-        <div>
-            <lable for="text">Name:</lable>
-            <input type="text" id="name" class="form-control">
-           
-        </div><br>
-        <div>
-            <lable for="email">Email:</lable>
-            <input type="email" id="email" class="form-control">
-            
-        </div><br>
-        <div>
-            <lable for="number">Phone number:</lable>
-            <input type="number" id="phoneNumber" class="form-control">
-         
-        </div><br>
-        <div>
-            <lable for="date">Birthday:</lable>
-            <input type="date" id="birthday" class="form-control" required>   
-              
-        </div><br>
-        <div>
-            <lable for="time">Appointment time:</lable>
-            <input type="time" id="time" class="form-control" required>
-           
-        </div><br>
-        <div>
-            <lable for="select_color">Favorite color:</lable>
-            <select id="select_color" class="form-control">
-                <option>select color</option>
-                <option >Pink</option>
-                <option >Red</option>
-                <option >Blue</option>
-            </select>
-            
-        </div><br>
-        <div>
-            <lable for="paymentMethod">Payment method:</lable><br> 
-            <input type="radio" id="paymentMethod" name="Payment" value="op1">Cash On Delivery<br>
-            <input type="radio" id="paymentMethod" name="Payment" value="op2">Debit cards<br>
-            <input type="radio" id="paymentMethod" name="Payment" value="op3">Credit cards<br>
-         
-        </div><br>
-        <div>
-            <lable for="range">Age:</lable>
-            <input type="range" id="age" min="0" max="100">
-           
-        </div><br>
-        <div>
-            <lable for="checkbox">Checkbox option:</lable><br>
-            <input type="checkbox" id="cOption">bank_1<br>
-            <input type="checkbox" id="cOption">bank_2<br>
-            <input type="checkbox" id="cOption">bank_3<br>
-          
-        </div><br>
-        <div>
-            <lable for="file">Upload photo</lable>
-            <input type="file" id="photo">
-            
-        </div><br>   
-    </form>
-    <div>
-        <button  class="btn btn-danger" onclick="submit()">submit</button>
+    <button type="button" class="btn btn-primary add_data" data-bs-toggle="modal" data-bs-target="#myModal">
+        Add Form
+      </button>
+    <!-- <button class="btn btn-success" onclick="addFormData()">Add Form</button> -->
+    <div class="modal fade" id="myModal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="container form_data">
+                <div class="modal-header">
+                    <h4 class="modal-title">Student Form</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                  </div>
+                <div class="modal-body">
+                    <form id="form" class="form_contant">
+                        <div>
+                            <lable for="text">Name:</lable>
+                            <input type="text" id="name" class="form-control">
+                           
+                        </div><br>
+                        <div>
+                            <lable for="email">Email:</lable>
+                            <input type="email" id="email" class="form-control">
+                            
+                        </div><br>
+                        <div>
+                            <lable for="number">Phone number:</lable>
+                            <input type="number" id="phoneNumber" class="form-control">
+                         
+                        </div><br>
+                        <div>
+                            <lable for="date">Birthday:</lable>
+                            <input type="date" id="birthday" class="form-control" required>   
+                              
+                        </div><br>
+                        <div>
+                            <lable for="time">Appointment time:</lable>
+                            <input type="time" id="time" class="form-control" required>
+                           
+                        </div><br>
+                        <div>
+                            <lable for="select_color">Favorite color:</lable>
+                            <select id="select_color" class="form-control">
+                                <option>select color</option>
+                                <option >Pink</option>
+                                <option >Red</option>
+                                <option >Blue</option>
+                            </select>
+                            
+                        </div><br>
+                        <div>
+                            <lable>Payment method:</lable><br> 
+                            <input type="radio" id="paymentMethod1" name="payment" value="Credit cards">Credit cards<br>
+                            <input type="radio" id="paymentMethod2" name="payment" value="Cash On Delivery">Cash On Delivery<br>
+                            <input type="radio" id="paymentMethod3" name="payment" value="Debit cards">Debit cards<br>
+                        </div><br>
+                        <div>
+                            <lable for="range">Age:</lable>
+                            <input type="range" id="age" min="0" max="100">
+                           
+                        </div><br>
+                        <div>
+                            <lable for="checkbox">Checkbox option:</lable><br>
+                            <input type="checkbox" id="cOption" value="bank_1">bank_1<br>
+                            <input type="checkbox" id="cOption" value="bank_2">bank_2<br>
+                            <input type="checkbox" id="cOption" value="bank_3">bank_3<br>
+                          
+                        </div><br>
+                        <div>
+                            <lable for="file">Upload photo</lable>
+                            <input type="file" id="my_file">
+                            
+                        </div><br>   
+                    </form>
+                </div>
+            </div>
+          </div>
+        </div>
+    <div class="text-center">
+        <button  class="btn btn-danger submit_btn" onclick="submitFormData()">Submit</button>
     </div>
     </div>
     
+    <br>
+    <br>
+
+    <div class="container"><span id="msg"></span></div><br>
+
     <div class="container table_data">
-    <table class="table table-bordered">
-        <tr>
-            <td>Name</td>
-            <td>Email</td>
-            <td>Phone Number</td>
-            <td>Birthday</td>
-            <td>Appointment time</td>
-            <td>Favorite color</td>
-            <td>Payment method</td>
-            <td>Age</td>
-            <td>Checkbox option</td>
-            <td>Upload photo</td>
-        </tr>
+    <table class="table table-bordered" id="data_list">
+        <thead>
+            <tr>
+                <td>Name</td>
+                <td>Email</td>
+                <td>Phone Number</td>
+                <td>Birthday</td>
+                <td>Appointment time</td>
+                <td>Favorite color</td>
+                <td>Payment method</td>
+                <td>Age</td>
+                <td>Checkbox option</td>
+                <td>Upload photo</td>
+                <td>Action</td>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
     </table>
     </div>
     <script src="js/bootstrap.bundle.min.js"></script>
